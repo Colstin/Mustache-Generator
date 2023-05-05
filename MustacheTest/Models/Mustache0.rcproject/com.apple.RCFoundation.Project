@@ -1,0 +1,94 @@
+{
+  "__content" : [
+    {
+      "scenes" : [
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "name" : "face"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                0,
+                9.8000001907348633
+              ],
+              "identifier" : "DFEBD5D2-79B7-4A79-AF29-AAC62A209426",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "E16C5C2B-7592-49AC-BFC1-378F161EAA0E" : null
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "Scene",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99599206447601318,
+                  -1.544520955576445e-08,
+                  0.089441068470478058,
+                  0,
+                  -0.0096395425498485565,
+                  0.99417519569396973,
+                  0.10734362155199051,
+                  0,
+                  -0.088920116424560547,
+                  -0.10777551680803299,
+                  0.99019074440002441,
+                  0,
+                  0.022659115493297577,
+                  0.01944732666015625,
+                  0.51511281728744507,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        }
+      ],
+      "tags" : {
+        "__content" : [
+          {
+            "tagsStore" : {
+
+            }
+          }
+        ],
+        "__version" : 1
+      }
+    }
+  ],
+  "__version" : 1
+}

@@ -18,7 +18,7 @@ struct ContentView : View {
     var body: some View {
       
         ZStack(alignment: .bottom){
-            ARViewContainer(selectedModel: $selectedModel).edgesIgnoringSafeArea(.top)
+            ARViewContainer(selectedModel: $selectedModel, isPlacementEnabled: $isPlacementEnabled).edgesIgnoringSafeArea(.top)
             
             if isPlacementEnabled {
                 PlacementButtons(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
@@ -37,6 +37,7 @@ struct ARViewContainer: UIViewRepresentable {
     //@Binding var modelConfirmedForPlacement:String?
     //@State var toggtleScene = Mustache1.self
     @Binding var selectedModel:String?
+    @Binding var isPlacementEnabled:Bool
     
     func makeUIView(context: Context) -> ARView {
         
@@ -60,19 +61,29 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {
         
         // Load the "Mustache" scene from the "Mustache1" Reality File
-        if let modelName = selectedModel {
-            if let anchor = try? Entity.loadAnchor(named: modelName){
-                uiView.scene.addAnchor(anchor)
+        
+        let modelName = selectedModel
+        
+        //if let modelName = selectedModel  {
+            
+        let anchor = try? Entity.loadAnchor(named: modelName ?? "Mustache0")
+            
+           
+            if isPlacementEnabled == true {
+                print("hi")
+                uiView.scene.addAnchor(anchor!)
+
                 
-                DispatchQueue.main.async {
-                    selectedModel = nil
-                }
+            } else {
+                print("not hi")
+                uiView.scene.removeAnchor(anchor!)
+                
+//                DispatchQueue.main.async {
+//                    selectedModel = nil
+//
+//                }
             }
-        }
-       
-        
-        //arView.scene.addAnchor(anchor)
-        
+
     }
    
 }

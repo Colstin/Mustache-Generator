@@ -18,23 +18,10 @@ struct PlacementButtons: View {
             //Cancel Button
             Button {
                 setButtonActivity()
-                //selectedModel = nil
+               
 
             } label: {
                 Image(systemName: "xmark")
-                    .frame(width: 60, height: 60)
-                    .font(.title)
-                    .background(.white.opacity(0.75))
-                    .cornerRadius(30)
-                    .padding(20)
-            }
-            
-            //Confirm Button
-            Button {
-                setButtonActivity()
-                //modelConfirmedForPlacement = selectedModel
-            } label: {
-                Image(systemName: "checkmark")
                     .frame(width: 60, height: 60)
                     .font(.title)
                     .background(.white.opacity(0.75))
@@ -46,7 +33,7 @@ struct PlacementButtons: View {
     
     func setButtonActivity(){
         isPlacementEnabled = false
-        //selectedModel = nil
+        selectedModel = nil
     }
 }
 

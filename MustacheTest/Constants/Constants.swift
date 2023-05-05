@@ -9,7 +9,7 @@ import Foundation
 
 class Constants {
     
-    static var models = ["Mustache1", "Mustache2", "Mustache3"]
+    static var models = ["Mustache0", "Mustache1", "Mustache2", "Mustache3"]
 
     static var models2: [String] = {
        

@@ -23,14 +23,14 @@ struct ModelPicker: View {
                         print("\(Constants.models[index])")
                     } label: {
                         //Image(uiImage: UIImage(named: Constants.models[index]))
-                        Image("Mustache\(index + 1)")
+                        Image("Mustache\(index)")
                             .resizable()
                             .frame(height: 80)
                             .aspectRatio(1/1, contentMode: .fit)
                             .background(.white)
                             .cornerRadius(12)
+                            
                     }
-
                 }
             }
         }
@@ -38,6 +38,7 @@ struct ModelPicker: View {
         .background(.black.opacity(0.5))
         .padding(.bottom)
     }
+  
 }
 
 /*
