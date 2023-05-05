@@ -20,6 +20,7 @@ struct ModelPicker: View {
                     Button {
                         isPlacementEnabled = true
                         selectedModel = Constants.models[index]
+                        print("\(Constants.models[index])")
                     } label: {
                         //Image(uiImage: UIImage(named: Constants.models[index]))
                         Image("Mustache\(index + 1)")

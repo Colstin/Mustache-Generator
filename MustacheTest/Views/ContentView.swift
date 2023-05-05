@@ -18,7 +18,7 @@ struct ContentView : View {
     var body: some View {
       
         ZStack(alignment: .bottom){
-            ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement).edgesIgnoringSafeArea(.top)
+            ARViewContainer(selectedModel: $selectedModel).edgesIgnoringSafeArea(.top)
             
             if isPlacementEnabled {
                 PlacementButtons(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
@@ -34,36 +34,45 @@ struct ContentView : View {
 
 struct ARViewContainer: UIViewRepresentable {
     
-    @Binding var modelConfirmedForPlacement:String?
-    @State var toggtleScene = Mustache1.self
+    //@Binding var modelConfirmedForPlacement:String?
+    //@State var toggtleScene = Mustache1.self
+    @Binding var selectedModel:String?
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let faceAnchor = try! toggtleScene.loadScene()
-        
+
         //Tells the ARView to use a face tracking configuration so that the app uses the correct user facing camera.
         let faceTrackingConfig = ARFaceTrackingConfiguration()
         arView.session.run(faceTrackingConfig)
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(faceAnchor)
         
+//        if let anchor = try? Entity.loadAnchor(named: Constants.models[0]){
+//            arView.scene.addAnchor(anchor)
+//        }
+        
+      
+
         return arView
         
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
         
-        if let modelName = modelConfirmedForPlacement{
-            print("adding model \(modelName) to scene")
-            
-            DispatchQueue.main.async {
-                modelConfirmedForPlacement = nil
+        // Load the "Mustache" scene from the "Mustache1" Reality File
+        if let modelName = selectedModel {
+            if let anchor = try? Entity.loadAnchor(named: modelName){
+                uiView.scene.addAnchor(anchor)
+                
+                DispatchQueue.main.async {
+                    selectedModel = nil
+                }
             }
         }
+       
+        
+        //arView.scene.addAnchor(anchor)
+        
     }
    
 }
@@ -75,3 +84,4 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+//https://www.youtube.com/watch?v=9R_G0EI-UoI

@@ -32,7 +32,7 @@ struct PlacementButtons: View {
             //Confirm Button
             Button {
                 setButtonActivity()
-                modelConfirmedForPlacement = selectedModel
+                //modelConfirmedForPlacement = selectedModel
             } label: {
                 Image(systemName: "checkmark")
                     .frame(width: 60, height: 60)
@@ -46,7 +46,7 @@ struct PlacementButtons: View {
     
     func setButtonActivity(){
         isPlacementEnabled = false
-        selectedModel = nil
+        //selectedModel = nil
     }
 }
 

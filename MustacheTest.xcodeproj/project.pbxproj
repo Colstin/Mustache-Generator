@@ -17,6 +17,7 @@
 		D64813642A049DD700CC7D62 /* ModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813632A049DD700CC7D62 /* ModelPicker.swift */; };
 		D64813672A049E2B00CC7D62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813662A049E2B00CC7D62 /* Constants.swift */; };
 		D648136B2A04B86000CC7D62 /* PlacementButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648136A2A04B86000CC7D62 /* PlacementButtons.swift */; };
+		D648136D2A056FC300CC7D62 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648136C2A056FC300CC7D62 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D64813632A049DD700CC7D62 /* ModelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPicker.swift; sourceTree = "<group>"; };
 		D64813662A049E2B00CC7D62 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D648136A2A04B86000CC7D62 /* PlacementButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementButtons.swift; sourceTree = "<group>"; };
+		D648136C2A056FC300CC7D62 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				D648135E2A0496A600CC7D62 /* Mustache1.rcproject */,
 				D648135F2A0496A700CC7D62 /* Mustache2.rcproject */,
 				D648135D2A0496A600CC7D62 /* Mustache3.rcproject */,
+				D648136C2A056FC300CC7D62 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D648136D2A056FC300CC7D62 /* Model.swift in Sources */,
 				D64813612A0496A700CC7D62 /* Mustache1.rcproject in Sources */,
 				D648136B2A04B86000CC7D62 /* PlacementButtons.swift in Sources */,
 				D64813642A049DD700CC7D62 /* ModelPicker.swift in Sources */,
