@@ -12,6 +12,8 @@ struct ModelPicker: View {
     @Binding var isPlacementEnabled:Bool
     @Binding var selectedModel:String?
     
+
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 30){
@@ -20,7 +22,8 @@ struct ModelPicker: View {
                     Button {
                         isPlacementEnabled = true
                         selectedModel = Constants.models[index]
-                        print("\(Constants.models[index])")
+                        
+                       // print("\(Constants.models[index])")
                     } label: {
                         //Image(uiImage: UIImage(named: Constants.models[index]))
                         Image("Mustache\(index)")

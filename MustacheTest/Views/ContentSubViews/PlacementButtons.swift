@@ -11,14 +11,14 @@ struct PlacementButtons: View {
     
     @Binding var isPlacementEnabled:Bool
     @Binding var selectedModel:String?
-    @Binding var modelConfirmedForPlacement: String?
+    @Binding var modelCancelled: Bool
     
     var body: some View {
         HStack{
             //Cancel Button
             Button {
-                setButtonActivity()
-               
+               setButtonActivity()
+               modelCancelled = true
 
             } label: {
                 Image(systemName: "xmark")

@@ -13,18 +13,23 @@ struct ContentView : View {
     
     @State var isPlacementEnabled = false
     @State var selectedModel:String?
-    @State var modelConfirmedForPlacement: String?
+    @State var modelCancelled = false
     
     var body: some View {
       
         ZStack(alignment: .bottom){
-            ARViewContainer(selectedModel: $selectedModel, isPlacementEnabled: $isPlacementEnabled).edgesIgnoringSafeArea(.top)
+            ARViewContainer(selectedModel: $selectedModel, isPlacementEnabled: $isPlacementEnabled, modelCancelled: $modelCancelled).edgesIgnoringSafeArea(.top)
             
             if isPlacementEnabled {
-                PlacementButtons(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
+                PlacementButtons(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelCancelled: $modelCancelled)
 
             } else {
                 ModelPicker(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel)
+                    .onAppear(){
+                        modelCancelled = false
+                    }
+                    
+                    
             }
             
          
@@ -38,7 +43,10 @@ struct ARViewContainer: UIViewRepresentable {
     //@State var toggtleScene = Mustache1.self
     @Binding var selectedModel:String?
     @Binding var isPlacementEnabled:Bool
+    @Binding var modelCancelled:Bool
     
+  
+
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
@@ -48,12 +56,11 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.run(faceTrackingConfig)
         
         
-//        if let anchor = try? Entity.loadAnchor(named: Constants.models[0]){
+//        if let anchor = try? Entity.loadAnchor(named: "Mustache1"){
 //            arView.scene.addAnchor(anchor)
 //        }
-        
-      
 
+        
         return arView
         
     }
@@ -62,27 +69,26 @@ struct ARViewContainer: UIViewRepresentable {
         
         // Load the "Mustache" scene from the "Mustache1" Reality File
         
-        let modelName = selectedModel
-        
-        //if let modelName = selectedModel  {
+         if let modelName = selectedModel {
+             print("Adding \(modelName) to scene")
+             
+             let anchor = try? Entity.loadAnchor(named: modelName)
+              uiView.scene.removeAnchor(anchor!)
+             
+              uiView.scene.addAnchor(anchor!)
+             
             
-        let anchor = try? Entity.loadAnchor(named: modelName ?? "Mustache0")
-            
-           
-            if isPlacementEnabled == true {
-                print("hi")
-                uiView.scene.addAnchor(anchor!)
+             if modelCancelled == true {
+                // selectedModel = nil
+                 print("true")
 
-                
-            } else {
-                print("not hi")
-                uiView.scene.removeAnchor(anchor!)
-                
-//                DispatchQueue.main.async {
-//                    selectedModel = nil
-//
-//                }
-            }
+
+             } else {
+                // uiView.scene.removeAnchor(anchor!)
+                 print("false")
+             }
+             
+         }
 
     }
    
