@@ -16,6 +16,7 @@
 		D64813622A0496A700CC7D62 /* Mustache2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D648135F2A0496A700CC7D62 /* Mustache2.rcproject */; };
 		D64813642A049DD700CC7D62 /* ModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813632A049DD700CC7D62 /* ModelPicker.swift */; };
 		D64813672A049E2B00CC7D62 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64813662A049E2B00CC7D62 /* Constants.swift */; };
+		D648136B2A04B86000CC7D62 /* PlacementButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648136A2A04B86000CC7D62 /* PlacementButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D648135F2A0496A700CC7D62 /* Mustache2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache2.rcproject; sourceTree = "<group>"; };
 		D64813632A049DD700CC7D62 /* ModelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPicker.swift; sourceTree = "<group>"; };
 		D64813662A049E2B00CC7D62 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D648136A2A04B86000CC7D62 /* PlacementButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				D64813442A04890D00CC7D62 /* AppDelegate.swift */,
-				D64813462A04890D00CC7D62 /* ContentView.swift */,
-				D64813632A049DD700CC7D62 /* ModelPicker.swift */,
+				D64813682A04B7BE00CC7D62 /* Views */,
 				D64813652A049E1500CC7D62 /* Constants */,
 				D648135A2A04949A00CC7D62 /* Models */,
 				D648134A2A04890E00CC7D62 /* Assets.xcassets */,
@@ -96,6 +97,24 @@
 				D64813662A049E2B00CC7D62 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D64813682A04B7BE00CC7D62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D64813462A04890D00CC7D62 /* ContentView.swift */,
+				D64813692A04B80F00CC7D62 /* ContentSubViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D64813692A04B80F00CC7D62 /* ContentSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				D64813632A049DD700CC7D62 /* ModelPicker.swift */,
+				D648136A2A04B86000CC7D62 /* PlacementButtons.swift */,
+			);
+			path = ContentSubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64813612A0496A700CC7D62 /* Mustache1.rcproject in Sources */,
+				D648136B2A04B86000CC7D62 /* PlacementButtons.swift in Sources */,
 				D64813642A049DD700CC7D62 /* ModelPicker.swift in Sources */,
 				D64813472A04890D00CC7D62 /* ContentView.swift in Sources */,
 				D64813602A0496A700CC7D62 /* Mustache3.rcproject in Sources */,

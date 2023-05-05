@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct ModelPicker: View {
+    
+    @Binding var isPlacementEnabled:Bool
+    @Binding var selectedModel:String?
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 30){
                 ForEach(0..<Constants.models.count, id: \.self){ index in
-                    //Text(models[index])
+                    
                     Button {
-                        print("\(Constants.models[index])")
+                        isPlacementEnabled = true
+                        selectedModel = Constants.models[index]
                     } label: {
-                        Image(uiImage: UIImage(named: Constants.models[index])!)
+                        //Image(uiImage: UIImage(named: Constants.models[index]))
+                        Image("Mustache\(index + 1)")
                             .resizable()
                             .frame(height: 80)
                             .aspectRatio(1/1, contentMode: .fit)
@@ -33,8 +39,10 @@ struct ModelPicker: View {
     }
 }
 
+/*
 struct ModelPicker_Previews: PreviewProvider {
     static var previews: some View {
         ModelPicker()
     }
 }
+*/
