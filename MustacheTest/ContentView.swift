@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ContentView : View {
     var body: some View {
@@ -21,10 +22,14 @@ struct ARViewContainer: UIViewRepresentable {
         let arView = ARView(frame: .zero)
         
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        let faceAnchor = try! Mustache3.loadScene()
+        
+        //Tells the ARView to use a face tracking configuration so that the app uses the correct user facing camera.
+        let faceTrackingConfig = ARFaceTrackingConfiguration()
+        arView.session.run(faceTrackingConfig)
         
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        arView.scene.anchors.append(faceAnchor)
         
         return arView
         
