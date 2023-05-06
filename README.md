@@ -1,25 +1,26 @@
 #  Mustache Generator
-# Learning App
 - - -
 ** Version 1.0.0 **
 
-- Learning App
-- User-interface uses courses and tests that keep track of a users score in order to help develop knowledge in Swift and SwiftUI.
-- Object Oriented Code using the MVVM Architecture pattern. 
-- Data is parsed on a local and a remote repository.
-- ForEach, ScrollViews, and NavigationLink to create the user interface 
+- Mustache Generator App
+- My first Augmented Reality App that uses ARFaceTrackingConfiguration() in order to add my custom made reality composer images onto the face. The horizontal scroll bar allows the user to select different Mustaches as well as the option of no mustache. 
+- ARKit
 
 ### Different Mustaches
 <div align="center">
-<img width="200" alt="LA1" title="Main Screen" src="">
+<img width="200" alt="Mustache0" title="Mustache0" src="https://user-images.githubusercontent.com/96356901/236646627-0e38e6e3-1dcd-4824-ba25-88f27150b947.PNG">
 &nbsp;
 &nbsp;
 &nbsp;
-<img width="200" alt="LA2" title="Content List View" src="">
+<img width="200" alt="Mustache1" title="Mustache1" src="https://user-images.githubusercontent.com/96356901/236646600-e5348333-dabf-42ff-bae8-ebb67246daeb.PNG">
 &nbsp;
 &nbsp;
 &nbsp;
-<img width="210" alt="LA-3" title="Content Detail view" src="">
+<img width="200" alt="Mustache2" title="Mustache2" src="https://user-images.githubusercontent.com/96356901/236646650-be455efd-9ea9-46de-b7d3-708e3818e80a.PNG">
+&nbsp;
+&nbsp;
+&nbsp;
+<img width="200" alt="Mustache3" title="Mustache3" src="https://user-images.githubusercontent.com/96356901/236646669-61856227-7103-4d2b-ab4d-7c984b42fb53.PNG">
 </div>
 
 
