@@ -88,4 +88,3 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
-//https://www.youtube.com/watch?v=9R_G0EI-UoI
