@@ -55,7 +55,6 @@ struct ARViewContainer: UIViewRepresentable {
         let faceTrackingConfig = ARFaceTrackingConfiguration()
         arView.session.run(faceTrackingConfig)
         
-        
 //        if let anchor = try? Entity.loadAnchor(named: "Mustache1"){
 //            arView.scene.addAnchor(anchor)
 //        }
@@ -73,25 +72,16 @@ struct ARViewContainer: UIViewRepresentable {
              print("Adding \(modelName) to scene")
              
              let anchor = try? Entity.loadAnchor(named: modelName)
-              uiView.scene.removeAnchor(anchor!)
-             
-              uiView.scene.addAnchor(anchor!)
-             
             
-             if modelCancelled == true {
-                // selectedModel = nil
-                 print("true")
-
+             if modelCancelled == false {
+                 uiView.scene.addAnchor(anchor!)
 
              } else {
-                // uiView.scene.removeAnchor(anchor!)
-                 print("false")
+                 uiView.scene.removeAnchor(anchor!)
+                 
              }
-             
          }
-
     }
-   
 }
 
 #if DEBUG
