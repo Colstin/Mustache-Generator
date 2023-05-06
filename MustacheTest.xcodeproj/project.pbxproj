@@ -35,6 +35,7 @@
 		D648136A2A04B86000CC7D62 /* PlacementButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementButtons.swift; sourceTree = "<group>"; };
 		D648136C2A056FC300CC7D62 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D648136E2A05968600CC7D62 /* Mustache0.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache0.rcproject; sourceTree = "<group>"; };
+		D64813702A05D5D800CC7D62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		D64813382A04890D00CC7D62 = {
 			isa = PBXGroup;
 			children = (
+				D64813702A05D5D800CC7D62 /* README.md */,
 				D64813432A04890D00CC7D62 /* MustacheTest */,
 				D64813422A04890D00CC7D62 /* Products */,
 			);

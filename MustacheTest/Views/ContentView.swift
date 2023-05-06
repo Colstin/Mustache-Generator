@@ -27,12 +27,9 @@ struct ContentView : View {
                 ModelPicker(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel)
                     .onAppear(){
                         modelCancelled = false
-                    }
-                    
+                    }     
                     
             }
-            
-         
         }
     }
 }
